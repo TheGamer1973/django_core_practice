@@ -17,9 +17,13 @@ from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from dashboard.views import LoginTemplateView, LogoutTemplateView
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls, name='admin'),
     url(r'^dashboard/', include('dashboard.urls'), name='dashboard'),
+    url(r'^login', LoginTemplateView.as_view(template_name='session.html'), name='login'),
+    url(r'^logout', LogoutTemplateView.as_view(template_name='session.html'), name='logout'),
 ]
 
 if settings.DEBUG:

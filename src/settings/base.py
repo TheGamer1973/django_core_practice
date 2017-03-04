@@ -123,3 +123,6 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAdminUser',
     ],
 }
+
+LOGIN_URL = '/login'
+LOGOUT_REDIRECT_URL = '/logout'
