@@ -1,0 +1,9 @@
+{% extends "common.html" %}
+
+{% block content %}
+    <h1>
+        {% if title %}
+            {{ title | upper }}
+        {% endif %}
+    </h1>
+{% endblock %}
